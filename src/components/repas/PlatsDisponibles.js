@@ -26,7 +26,7 @@ const MEALS = [
   },
   {
     id: "m5",
-    name: " Sandwich Arizona  ",
+    name: " Sandwich Arizonaaa  ",
     description: " jambon de boeuf , poivrons , piment rouge",
     prix: "7.500DT",
   },
