@@ -16,6 +16,7 @@
   padding: 0 3%;
   box-shadow: 0 2px 8px rgba(230, 183, 183, 0.25);
   z-index: 10;
+  text-decoration: none;
   
 
 }
@@ -96,24 +97,37 @@
 }
 .summary {
   text-align: center;
-  max-width: 45rem;
-  width: 90%;
+  max-width: 50rem;
+  height: 10rem;
+  width: 200%;
   margin: auto;
   margin-top: -10rem;
   position: relative;
-  background-color: #383838;
+  background-color: #1b2236;
   color: white;
+  font-size: 26px ;
+  font-weight: bold;
   border-radius: 14px;
   padding: 1rem;
-  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 18px 10px rgba(177, 211, 224, 0.25);
 }
 
 .summary h2 {
-  font-size: 2rem;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
   margin-top: 0;
 }
-.meals{
-  
+.meals {
+  max-width: 60rem;
+  width: 90%;
+  margin: 2rem auto;
+  animation: meals-appear 1s ease-out forwards;
+}
+
+.meals ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .searchh{
 display:flex;
@@ -128,3 +142,189 @@ gap: 5px;
   background-color: transparent;
 
 }
+.boutton{
+  background-color: antiquewhite;
+  border-radius: 20%;
+  border-color: black;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+.meal {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.meal h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.description {
+  font-style: italic;
+}
+
+.prix {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: #4bbd27;
+  font-size: 1.25rem;
+}
+.form {
+  text-align: right;
+}
+
+
+
+.boutton:hover,
+.boutton:active {
+  background-color:burlywood;}
+
+  .input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input label {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  
+  .input input {
+    width: 3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font: inherit;
+    padding-left: 0.5rem;
+  }
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .modal {
+    position: fixed;
+    top: 20vh;
+    left: 5%;
+    width: 90%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    z-index: 30;
+    animation: slide-down 300ms ease-out forwards;
+  }
+  .card {
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    background-color: white;
+  }
+  .cart-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 20rem;
+    overflow: auto;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .actions {
+    text-align: right;
+  }
+  
+  .actions button {
+    font: inherit;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #249502;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+  }
+  
+  .actions button:hover,
+  .actions button:active {
+    background-color: #1d7901;
+    border-color: #4BBD27;
+    color: white;
+  }
+  
+  .actions .button--alt {
+    color: #4BBD27;
+  }
+  
+  .actions .button {
+    background-color: #4BBD27;
+    color: white;
+  }
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #4bbd27;
+    padding: 1rem 0;
+    margin: 1rem 0;
+  }
+  
+  .cart-item h2 {
+    margin: 0 0 0.5rem 0;
+    color: #363636;
+  }
+
+  
+  .prix {
+    font-weight: bold;
+    color: #40bd1a;
+  }
+  
+  .amount {
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    color: #363636;
+  }
+  
+  .actions {
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  .cart-item button {
+    font: inherit;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #4bbd27;
+    border: 1px solid #2f9c0e;
+    width: 3rem;
+    text-align: center;
+    border-radius: 6px;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin: 0.25rem;
+  }
+  
+  .cart-item button:hover,
+  .cart-item button:active {
+    background-color: #1d7901;
+    color: white;
+  }

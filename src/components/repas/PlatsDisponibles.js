@@ -1,9 +1,10 @@
 import MealItem from "./MealItem/MealItem";
+import Card from "../userinterface/Card";
 const MEALS = [
   {
     id: "m1",
     name: "Cheese Burger ",
-    description: "steak haché,fromage césar , laitue, tomate ,ketchup",
+    description: "steak haché,fromage césar , laitue, tomate ",
     prix: "9,500DT",
   },
   {
@@ -21,13 +22,13 @@ const MEALS = [
   {
     id: "m4",
     name: "Plat escalope",
-    description: "riz , salade grillée , frites , escalope panné",
+    description: "riz  , salade  grillée , frites , escalope panné",
     prix: "18.600DT",
   },
   {
     id: "m5",
-    name: " Sandwich Arizonaaa  ",
-    description: " jambon de boeuf , poivrons , piment rouge",
+    name: " Sandwich Arizona",
+    description: "jambon de boeuf,poivrons,piment rouge",
     prix: "7.500DT",
   },
   {

@@ -1,31 +1,38 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/layout/Header";
-import HeaderButton from "./components/layout/HeaderButton";
+import Plats from "./components/repas/Plats";
 import PlatsDisponibles from "./components/repas/PlatsDisponibles";
-import MealItem from "./components/repas/MealItem/MealItem";
 import MealSummary from "./components/repas/MealSummary";
-import { Route, Routes } from "react-router-dom";
-import Cart from "./components/carte/Cart";
+import MealItem from "./components/repas/MealItem/MealItem";
+import MealItemForm from "./components/repas/MealItem/MealItemForm";
+import Card from "./components/userinterface/Card";
+import Input from "./components/userinterface/Input";
+import Modal from "./components/userinterface/Modal";
+
+import Cart from "./components/Cart/Carte";
+import CartProvider from "./store/CartProvider";
+
 function App() {
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  };
+
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
+
   return (
-    <div className="App">
-      <Header />
+    <CartProvider>
+      {cartIsShown && <Cart onClose={hideCartHandler} />}
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div>
-              <MealItem />
-              <PlatsDisponibles />
-            </div>
-          }
-        />
-
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-    </div>
+      <Header onShowCart={showCartHandler} onClose={hideCartHandler} />
+      <main>
+        <Plats />
+      </main>
+    </CartProvider>
   );
 }
 
